@@ -1,0 +1,25 @@
+{
+  "name": "ui_tests_to_automated",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/cli": "^6.12.1",
+    "@wdio/local-runner": "^6.12.1",
+    "@wdio/mocha-framework": "^6.11.0",
+    "@wdio/spec-reporter": "^6.11.0",
+    "@wdio/sync": "^6.11.0",
+    "chromedriver": "^88.0.0",
+    "wdio-chromedriver-service": "^6.0.4"
+  },
+  "dependencies": {
+    "expect": "^26.6.2",
+    "expect-webdriverio": "^1.4.1",
+    "selenium-webdriver": "^4.0.0-alpha.8"
+  }
+}

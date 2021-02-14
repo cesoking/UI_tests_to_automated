@@ -1,0 +1,76 @@
+describe('airbnb.com page', () => {
+
+    it('Select Rome, Italy', () => {
+
+        browser.url('https://www.airbnb.com/')
+
+        const sLocationClick = $('._gor68n');
+        sLocationClick.click();
+
+        const locationName = $('[name="query"]');
+        locationName.setValue("Rome, Italy");
+
+    })
+
+    it('Pick a Check-In date', () => {
+
+        let value = $('._wtz1co');
+
+        if (value.getText() == "Check in") {
+            console.log(value.getText());
+            value.click();
+
+            var datetime = new Date(Date.now() + 604800000); //A very simple (but ugly) way to do it.
+
+            console.log(datetime.toISOString().slice(0, 10));
+            let testid = datetime.toISOString().slice(0, 10).toString();
+
+            const currDate = $('[data-testid="datepicker-day-' + testid +
+                '"]');
+            currDate.click();
+
+
+        }
+
+        browser.pause(5000);
+
+    })
+
+    // it('Pick a Check-Out date', () => {
+
+    //     let value = $('._wtz1co');
+
+    //     if (value.getText() == "Check out") {
+    //         // console.log(value.getText());
+    //         // value.click();
+
+    //         var datetime = new Date(Date.now() + 604800000); //A very simple (but ugly) way to do it.
+
+    //         console.log(datetime.toISOString().slice(0, 10));
+    //         let testid = datetime.toISOString().slice(0, 10).toString();
+
+    //         const currDate = $('[data-testid="datepicker-day-' + testid +
+    //             '"]');
+    //         currDate.click();
+
+
+    //     }
+
+    //     browser.pause(5000);
+
+    // })
+
+
+
+})
+
+npx wdio wdio.conf.js
+
+ browser.deleteSession();
+
+ for(i=0; i<result.length; i++){
+  (client.getText(result[i])).
+   then((re) => console.log(re))
+}
+
+https://www.youtube.com/watch?v=CQEQTQfCIzU
